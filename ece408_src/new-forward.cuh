@@ -61,7 +61,7 @@ if(h < H_out && w < W_out) {
             }
         }
     }
-    y4d(n, m, h, w) = acc;
+    atomicAdd(&y4d(n, m, h, w), acc);
 }
 
 #undef y4d
